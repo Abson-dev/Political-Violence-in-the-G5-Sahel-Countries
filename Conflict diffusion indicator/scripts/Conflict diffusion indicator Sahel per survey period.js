@@ -1,5 +1,22 @@
 
-
+var WorldPop = ee.ImageCollection("WorldPop/GP/100m/pop"),
+    pop_sahel = ee.Image("projects/ee-aboubacarhema94/assets/ACLED/Sahel_pop_2020_UNadj_constrained"),
+    sahel_adm2 = ee.FeatureCollection("projects/ee-aboubacarhema94/assets/ACLED/G5_Sahel_adm2"),
+    events_diffusion = ee.FeatureCollection("projects/ee-aboubacarhema94/assets/ACLED/G5_Sahel_Diffusion"),
+    geometry = 
+    /* color: #d63000 */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[-18.199748102330243, 28.38016082795913],
+          [-18.199748102330243, 2.8095840714382856],
+          [27.327595647669753, 2.8095840714382856],
+          [27.327595647669753, 28.38016082795913]]], null, false),
+    events_diffusion_period = ee.FeatureCollection("projects/ee-aboubacarhema94/assets/ACLED/G5_Sahel_Diffusion_period");
 
 /*
 
