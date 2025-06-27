@@ -83,7 +83,23 @@ The computation involves four key steps, implemented in GEE, using WorldPop popu
 
 ---
 
-## 3. Key Outputs
+## 3. Data Sources
+The following datasets were used to compute the Conflict Diffusion Indicator in the Sahel region for 2018:
+
+- **WorldPop**: Global high-resolution population data (100m resolution).  
+  WorldPop. (2020). *Global high-resolution population estimates* [Data set]. University of Southampton. https://www.worldpop.org/
+- **ACLED**: Conflict event data for the Sahel region, 2018.  
+  Armed Conflict Location & Event Data Project (ACLED). (2018). *ACLED conflict event data: Africa (Sahel region)* [Data set]. https://acleddata.com/data-export-tool/
+- **UN-OCHA**: Administrative boundaries (level 2) for the Sahel region.  
+  United Nations Office for the Coordination of Humanitarian Affairs (OCHA). (2015). *Global Administrative Unit Layers (GAUL): Level 2 boundaries* [Data set]. Food and Agriculture Organization of the United Nations. https://data.humdata.org/dataset/gaul-administrative-boundaries
+- **ACLED Methodology**: Definition of the Conflict Diffusion Indicator.  
+  Armed Conflict Location & Event Data Project (ACLED). (2025). *ACLED Conflict Index: Mid-year update* [Methodology documentation]. https://acleddata.com/acled-conflict-index-mid-year-update/
+
+**Note**: Data accessed via Google Earth Engine. Contact a.hema@cgiar.org for details on specific dataset versions or usage.
+
+---
+
+## 4. Key Outputs
 - **Map Visualizations**:
   - Population rasters (1km, 10km).
   - Binary masks for population (≥50 inhabitants) and high-violence cells (≥3 events).
@@ -97,11 +113,11 @@ The computation involves four key steps, implemented in GEE, using WorldPop popu
 
 ---
 
-## 4. Notes for Implementation
+## 5. Notes for Implementation
 - **Data Sources**:
-  - **WorldPop**: Population data (`pop_sahel`, 100m resolution).
-  - **ACLED**: Conflict event data (`events_diffusion`, point-based).
-  - **OCHA**: Administrative boundaries (`sahel_adm2`, level 2).
+  - WorldPop: Population data (`pop_sahel`, 100m resolution).
+  - ACLED: Conflict event data (`events_diffusion`, point-based).
+  - OCHA: Administrative boundaries (`sahel_adm2`, level 2).
 - **Parameters**:
   - Population threshold: 50 (adjustable; ACLED default: 100).
   - Event threshold: 3 (adjustable; ACLED default: 10).
@@ -114,7 +130,7 @@ The computation involves four key steps, implemented in GEE, using WorldPop popu
 
 ---
 
-## 5. Recommendations for WFP
+## 6. Recommendations for WFP
 - **Use Case**: The Conflict Diffusion Indicator can inform WFP’s humanitarian planning by identifying regions with widespread violence, prioritizing aid allocation.
 - **Visualization**: Include maps in presentations to show conflict spread (e.g., high-violence cells overlaid on adm2 boundaries).
 - **Extensions**:
@@ -128,7 +144,7 @@ The computation involves four key steps, implemented in GEE, using WorldPop popu
 
 ---
 
-## 6. Contact
+## 7. Contact
 For further details or assistance with implementation, contact:
 - Aboubacar HEMA (a.hema@cgiar.org)
 - Wim MARIVOET (w.marivoet@cgiar.org)
